@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { GameState, ValMap, Team } from "../lib/types";
+import { GameState, ValMap } from "../lib/types";
 import { initialMaps } from "../lib/data/maps";
 import MapGrid from "./MapGrid";
 import TeamIndicator from "./TeamIndicator";
@@ -9,7 +9,6 @@ import SelectedMap from "./SelectedMap";
 import ControlPanel from "./ControlPanel";
 import MapImageEditor from "./MapImageEditor";
 
-// Local storage key for saved image paths
 const SAVED_MAP_IMAGES_KEY = "valorant-map-picker-custom-images";
 
 export default function MapPicker() {
@@ -26,7 +25,6 @@ export default function MapPicker() {
   const [showInstructions, setShowInstructions] = useState(true);
   const [showImageEditor, setShowImageEditor] = useState(false);
 
-  // Load saved image paths from localStorage on initial render
   useEffect(() => {
     if (typeof window !== "undefined") {
       try {
@@ -62,7 +60,7 @@ export default function MapPicker() {
 
   // Handle map selection
   const handleMapClick = (mapId: string) => {
-    const { phase, maps } = gameState;
+    const { phase } = gameState;
 
     // First ban phase
     if (phase === "banPhaseA" || phase === "banPhaseB") {

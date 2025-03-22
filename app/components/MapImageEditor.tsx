@@ -17,7 +17,6 @@ export default function MapImageEditor({
   const [newImageUrl, setNewImageUrl] = useState("");
   const [showSampleURLs, setShowSampleURLs] = useState(false);
 
-  // Sample Valorant map image URLs that should work immediately
   const sampleURLs = {
     ascent:
       "https://static.wikia.nocookie.net/valorant/images/0/04/Loading_Screen_Ascent.png",
@@ -202,8 +201,8 @@ export default function MapImageEditor({
           <li>Use relative paths for local images (/images/maps/custom.png)</li>
           <li>Supported formats: JPG, PNG, GIF, WebP, SVG, etc.</li>
           <li className="text-green-400">
-            Click "Use Sample URLs" to immediately use working Valorant map
-            images
+            Click `&quot;`Use Sample URLs`&quot;` to immediately use working
+            Valorant map images
           </li>
         </ul>
       </div>

@@ -10,9 +10,9 @@ export default function ControlPanel({
   onReset,
   showInstructions,
   toggleInstructions,
-  showImageEditor,
-  toggleImageEditor,
-}: ControlPanelProps) {
+}: // showImageEditor,
+// toggleImageEditor,
+ControlPanelProps) {
   return (
     <div className="mb-6">
       <div className="flex flex-wrap justify-center gap-2 mb-4">

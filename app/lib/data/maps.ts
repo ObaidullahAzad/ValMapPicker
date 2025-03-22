@@ -1,7 +1,5 @@
 import { ValMap } from "../types";
-import da from "../../../public/images/split.jpg";
 
-// Default public image paths - these will work once user adds images
 export const initialMaps: ValMap[] = [
   {
     id: "ascent",
