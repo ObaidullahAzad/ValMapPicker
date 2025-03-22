@@ -1,0 +1,17 @@
+This directory is for Valorant map images.
+
+Default map image names:
+- ascent.jpg  
+- bind.jpg
+- haven.jpg
+- split.jpg
+- icebox.jpg
+- breeze.jpg
+- fracture.jpg
+
+However, you can use the "Customize Images" button in the app to set any image path, file type, or location you prefer. You're not limited to these names or formats anymore!
+
+You can use:
+- Local images in the public directory: /images/your-folder/any-name.png
+- External images: https://example.com/image.jpg
+- Any image format: JPG, PNG, GIF, WebP, SVG, etc. 

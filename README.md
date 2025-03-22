@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Valorant Map Picker
+
+A web application for selecting Valorant maps through a team-based ban/pick process.
+
+## Features
+
+- Two-team map selection process (Team A and Team B)
+- Team A bans one map, then Team B bans another map
+- Teams take turns picking maps
+- Automatic final map selection based on team choices
+- Responsive design that works on desktop and mobile
+- Fully customizable map images
+
+## How the Map Selection Works
+
+1. Team A bans one map from the pool of 7 maps
+2. Team B bans another map from the remaining maps
+3. Team A selects one map
+4. Team B selects one map
+5. If both teams choose the same map, that map is selected
+6. If teams choose different maps, Team A makes a final selection
+7. Team B makes a final selection
+8. If teams still choose different maps, the last remaining map is selected
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.17 or later
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customizing Map Images
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You have two ways to add map images:
 
-## Learn More
+### Option 1: Default File Structure
 
-To learn more about Next.js, take a look at the following resources:
+Place your map images in the `/public/images/maps/` directory with the default filenames:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ascent.jpg
+- bind.jpg
+- haven.jpg
+- split.jpg
+- icebox.jpg
+- breeze.jpg
+- fracture.jpg
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Option 2: In-App Customization
 
-## Deploy on Vercel
+1. Click the "Customize Images" button in the app
+2. Edit each map's image path individually
+3. You can use:
+   - Local images in public directory: `/images/your-folder/any-name.png`
+   - External images: `https://example.com/image.jpg`
+   - Any image format: JPG, PNG, GIF, WebP, SVG, etc.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Built With
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js](https://nextjs.org/) - The React framework
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
